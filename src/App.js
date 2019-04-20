@@ -2,8 +2,8 @@ import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 
-import Header from "./components/header";
-import Experience from "./components/experience";
+import Header from "./components/Header";
+import Experience from "./components/Experience";
 
 class App extends Component {
   render() {

@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import data from "../../data";
-import Section from "../section";
-import Job from "../job";
-import Timeline from "../timeline";
+import Section from "../Section";
+import Job from "../Job";
+import Timeline from "../Timeline";
 
 const ExperienceBody = styled.div`
   display: flex;

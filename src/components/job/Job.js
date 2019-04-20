@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Card from "../Card";
+import TechStack from "../TechStack";
 
 const JobTitle = styled.div`
   flex-shrink: 0;
@@ -19,18 +20,6 @@ const Abstract = styled.p`
   color: gray;
   font-family: "Open Sans Condensed";
   margin: 0;
-`;
-
-const TechStack = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  width: 100%;
-  height: 24px;
-  filter: grayscale(0);
-
-  & > * {
-    margin-left: 16px;
-  }
 `;
 
 export default function Job({
@@ -73,16 +62,7 @@ export default function Job({
       </span>
       <Card.Body className="job__info">
         <Abstract>{abstract}</Abstract>
-        <TechStack>
-          {techStack &&
-            techStack.map(t => (
-              <img
-                src={`/logos/${t}.svg`}
-                alt="logo"
-                style={{ height: "100%" }}
-              />
-            ))}
-        </TechStack>
+        <TechStack techStack={techStack} />
       </Card.Body>
     </Card>
   );
