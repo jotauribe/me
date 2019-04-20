@@ -57,7 +57,7 @@ export default function Job({
 
             marginRight: "5px"
           }}
-        />{" "}
+        />
         @{company}
       </span>
       <Card.Body className="job__info">
