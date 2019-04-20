@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import Identity from "../Identity";
-import About from "../about";
+import About from "../About";
 import Photo from "../Photo";
-import Button from "../button";
+import Button from "../Button";
 import Networks from "../Networks";
 import Icon from "../Icon";
 import Section from "../Section";
