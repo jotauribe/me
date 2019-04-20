@@ -7,14 +7,7 @@ import Photo from "../photo";
 import Button from "../button";
 import Networks from "../networks";
 import Icon from "../icon";
-
-const Header = styled.div`
-  display: flex;
-  width: auto;
-  background-color: #fcfdfe;
-  border: 40px solid white;
-  position: relative;
-`;
+import Section from "../section";
 
 const HeaderContent = styled.div`
   flex-basis: 60%;
@@ -42,9 +35,9 @@ const HeaderActions = styled.div`
   display: flex;
 `;
 
-export default function HeaderComponent() {
+export default function Header() {
   return (
-    <Header className="header">
+    <Section className="header">
       <HeaderContent className="header__content">
         <Identity className="hola bebe" />
         <About />
@@ -65,6 +58,6 @@ export default function HeaderComponent() {
       <HeaderBackground className="header__photo">
         <Photo imgUrl="/profile-photo.png" />
       </HeaderBackground>
-    </Header>
+    </Section>
   );
 }

@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Header from "./components/header";
+import Experience from "./components/experience";
 
 class App extends Component {
   render() {
     return (
       <div className="App container">
         <Header />
+        <Experience />
       </div>
     );
   }
