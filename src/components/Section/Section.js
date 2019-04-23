@@ -2,27 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 const SectionComponent = styled.div`
-  display: flex;
-  width: auto;
   background-color: var(--theme-color-raised-content);
   border: 40px solid white;
-  position: relative;
-  flex-wrap: wrap;
 `;
 
 const SectionTitle = styled.div.attrs({ className: "section__title" })`
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
   color: gray;
   width: 100%;
-  flex-shrink: 0;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   text-align: center;
 `;
 
-function Section({ children, className }) {
+function Section({ children, className, style }) {
   return (
-    <SectionComponent className={`section ${className}`}>
+    <SectionComponent className={`section ${className}`} style={style}>
       {children}
     </SectionComponent>
   );
