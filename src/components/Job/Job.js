@@ -7,20 +7,22 @@ import TechStack from "../TechStack";
 const JobTitle = styled.div`
   flex-shrink: 0;
   font-weight: 800;
+  max-width: 100%;
 `;
 
 const Period = styled.div`
-  color: gray;
+  color: var(--theme-color-secondary);
   font-size: 12px;
   font-family: "Open Sans";
   flex-shrink: 0;
 `;
 
 const Abstract = styled.p`
-  color: gray;
-  font-family: "Open Sans Condensed";
+  font-family: "Open Sans";
   margin: 0;
 `;
+
+//TODO: extract span as component
 
 export default function Job({
   company,
