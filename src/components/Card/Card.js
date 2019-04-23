@@ -13,6 +13,7 @@ const CardComponent = styled.div`
 
 const CardHeader = styled.div.attrs({ className: "card__header" })`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   flex-shrink: 0;
   justify-content: space-between;
