@@ -13,14 +13,13 @@ const Networks = styled.div`
 `;
 
 const NetworkLink = styled(Icon).attrs({ className: "network-link" })`
-  opacity: 0.25;
+  opacity: 0.8;
   transition-property: all;
   transition-duration: 200ms;
-  filter: grayscale(1);
 
   &:hover {
     opacity: 1;
-    filter: grayscale(0);
+    transform: scale(1.1);
   }
 `;
 

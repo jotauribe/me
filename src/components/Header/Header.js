@@ -8,6 +8,7 @@ import Button from "../Button";
 import Networks from "../Networks";
 import Icon from "../Icon";
 import Section from "../Section";
+import Contact from "../Contact";
 
 const HeaderContent = styled.div`
   flex-basis: 60%;
@@ -15,7 +16,7 @@ const HeaderContent = styled.div`
   z-index: 10;
 
   & > *:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 `;
 
@@ -37,9 +38,13 @@ const HeaderActions = styled.div`
 
 export default function Header() {
   return (
-    <Section className="header">
+    <Section
+      className="header"
+      style={{ display: "flex", position: "relative" }}
+    >
       <HeaderContent className="header__content">
-        <Identity className="hola bebe" />
+        <Identity className="identity" />
+        <Contact />
         <About />
         <HeaderActions className="header__actions">
           <Networks />

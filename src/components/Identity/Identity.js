@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const IdentitySectionWrapper = styled.div`
+const IdentityComponent = styled.div`
   display: flex;
   flex-direction: column;
   align-content: stretch;
@@ -22,19 +22,22 @@ const LastName = styled.div`
   margin-left: 8px;
 `;
 
-const Title = styled.div`
+const Profession = styled.div`
   text-align: left;
   letter-spacing: 4px;
+  padding: 0 4px;
   color: gray;
 `;
 
-export default function Identity() {
+export default function Identity({ firstname, lastname, profession }) {
   return (
-    <IdentitySectionWrapper className="identity">
-      <Name>
+    <IdentityComponent className="identity">
+      <Name className="identity__name">
         JHONATAN <LastName> URIBE</LastName>{" "}
       </Name>
-      <Title>SOFTWARE DEVELOPER</Title>
-    </IdentitySectionWrapper>
+      <Profession className="identity__profession">
+        SOFTWARE DEVELOPER
+      </Profession>
+    </IdentityComponent>
   );
 }
