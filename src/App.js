@@ -4,21 +4,22 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Experience from "./components/Experience";
-import Contact from "./components/Contact";
+import Skills from "./components/Skills";
+import Langs from "./components/Languages";
 
-const TwoColumnsLayout = styled.div`
+const ThreeColumnsLayout = styled.div`
   display: flex;
   background-color: transparent;
 
   & > *:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 8px;
   }
 
   & > * {
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 33.333%;
+    max-width: 33.4%;
   }
 `;
 
@@ -27,9 +28,19 @@ class App extends Component {
     return (
       <div className="App container">
         <Header />
-        <TwoColumnsLayout style={{ display: "flex", alignItems: "stretch" }}>
+        <ThreeColumnsLayout style={{ display: "flex", alignItems: "stretch" }}>
           <Experience />
-        </TwoColumnsLayout>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "stretch"
+            }}
+          >
+            <Skills style={{ marginBottom: "8px" }} />
+            <Langs style={{ flexGrow: "1" }} />
+          </div>
+        </ThreeColumnsLayout>
       </div>
     );
   }

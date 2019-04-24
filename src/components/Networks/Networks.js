@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import data from "../../data";
 import Icon from "../Icon";
 
 const Networks = styled.div`
@@ -24,11 +25,12 @@ const NetworkLink = styled(Icon).attrs({ className: "network-link" })`
 `;
 
 export default function NetworksComponent({ header, body, footer }) {
+  const { networks } = data;
+
   return (
     <Networks className="networks">
-      <NetworkLink name="linkedin" fill="#357AB6" />
-      <NetworkLink name="github" fill="#171515" />
-      <NetworkLink name="twitter" fill="#5DA9DD" />
+      {networks &&
+        networks.map(n => <NetworkLink name={n.name} fill={n.color} />)}
     </Networks>
   );
 }

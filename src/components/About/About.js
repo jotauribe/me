@@ -7,7 +7,8 @@ const AboutComponent = styled.div`
   text-align: left;
   letter-spacing: 0.5px;
   font-family: "Open Sans Condensed";
-  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
   font-size: 24px;
   margin: 0;
 
