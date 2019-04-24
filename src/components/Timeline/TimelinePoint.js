@@ -3,10 +3,7 @@ import styled from "styled-components";
 
 const TimelinePointComponent = styled.div`
   position: relative;
-
-  &:nth-child(even) {
-    padding-top: 188px;
-  }
+  ${props => (props.left ? "padding-top: 188px;" : "")}
 
   &&::after {
     content: " ";
@@ -16,14 +13,14 @@ const TimelinePointComponent = styled.div`
     display: block;
     position: absolute;
     top: 0;
-    ${props => (props.left ? "right: -4px;" : "")}
+    ${props => (!props.left ? "right: -4px;" : "")}
   }
 `;
 
 const TimelinePointInner = styled.div`
   position: relative;
   display: flex;
-  ${props => (props.left ? "flex-direction: row-reverse;" : "")}
+  ${props => (!props.left ? "flex-direction: row-reverse;" : "")}
   align-items: center;
   padding-left: 24px;
   padding-right: 24px;
@@ -39,7 +36,7 @@ const TimelinePointInner = styled.div`
     display: block;
     position: absolute;
     z-index: 10;
-    ${props => (props.left ? "right: -10px;" : "left: -6px;")}
+    ${props => (!props.left ? "right: -10px;" : "left: -6px;")}
   }
 `;
 

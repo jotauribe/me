@@ -6,7 +6,6 @@ import TimelinePoint from "./TimelinePoint";
 const TimelineComponent = styled.div`
   width: 100%;
   display: flex;
-
   flex-wrap: wrap;
 
   & > * {
@@ -22,7 +21,7 @@ function Timeline({ children }) {
       {React.Children.map(children, (child, i) => {
         if (child.type.displayName !== TimelinePoint.displayName)
           return <TimelinePoint left={isEven(i)}>{child}</TimelinePoint>;
-        else return React.cloneElement(child, { left: isEven(i) });
+        else return React.cloneElement(child, { left: !isEven(i) });
       })}
     </TimelineComponent>
   );

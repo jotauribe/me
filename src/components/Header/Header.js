@@ -14,6 +14,7 @@ const HeaderContent = styled.div`
   flex-basis: 60%;
   flex-grow: 0;
   z-index: 10;
+  padding: 0 16px;
 
   & > *:not(:last-child) {
     margin-bottom: 24px;

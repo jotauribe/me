@@ -25,13 +25,13 @@ const CardBody = styled.div.attrs({ className: "card__body" })`
   flex-direction: column;
 
   & > *:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 `;
 
 function Card({ children, className }) {
   return (
-    <CardComponent className={`card ${className}`}>{children}</CardComponent>
+    <CardComponent className={`-card ${className}`}>{children}</CardComponent>
   );
 }
 
