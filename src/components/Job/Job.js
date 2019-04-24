@@ -12,13 +12,15 @@ const JobTitle = styled.div`
 
 const Period = styled.div`
   color: var(--theme-color-secondary);
-  font-size: 12px;
+  font-size: 10px;
   font-family: "Open Sans";
   flex-shrink: 0;
+  width: 100%;
 `;
 
 const Abstract = styled.p`
   font-family: "Open Sans";
+  font-size: 14px;
   margin: 0;
 `;
 
@@ -35,8 +37,8 @@ export default function Job({
   return (
     <Card className="job">
       <Card.Header className="job__header">
-        <JobTitle>{position.toUpperCase()}</JobTitle>
         <Period>{period}</Period>
+        <JobTitle>{position.toUpperCase()}</JobTitle>
       </Card.Header>
       <span
         style={{

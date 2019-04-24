@@ -17,6 +17,6 @@ const ProfilePhoto = styled.div`
   opacity: 0.5;
 `;
 
-export default function Layout({ imgUrl }) {
+export default function Photo({ imgUrl }) {
   return <ProfilePhoto className="photo" imgUrl={imgUrl} />;
 }
