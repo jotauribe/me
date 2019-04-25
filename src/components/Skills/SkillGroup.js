@@ -4,7 +4,6 @@ import styled from "styled-components";
 import SkillBar from "./SkillBar";
 
 const SkillsContainer = styled.div`
-  padding: 4px;
   display: flex;
   flex-wrap: wrap;
   color: gray;
@@ -26,10 +25,17 @@ const SkillGroupName = styled.div`
   font-weight: 700;
 `;
 
-function SkillGroup({ name, skills, color, bgColor }) {
+function SkillGroup({
+  name,
+  skills,
+  color,
+  bgColor,
+  style = {},
+  className = ""
+}) {
   return (
-    <SkillsContainer>
-      <SkillGroupName>{name.toUpperCase()}</SkillGroupName>
+    <SkillsContainer style={style} className={`skill-group ${className}`}>
+      {name && <SkillGroupName>{name.toUpperCase()}</SkillGroupName>}
       {skills &&
         skills.map(s => (
           <SkillBar

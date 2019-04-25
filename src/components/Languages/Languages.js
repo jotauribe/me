@@ -12,21 +12,30 @@ const LangsSection = styled(Section)`
 `;
 
 const LangList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   & > *:not(:last-child) {
-    margin-right: 24px;
+    margin-bottom: 24px;
   }
 `;
 
-function Skills({ style }) {
+function Skills({ style = {}, className = "" }) {
   const { languages } = data;
 
   return (
-    <LangsSection style={style}>
+    <LangsSection style={style} className={`languages ${className}`}>
       <Section.Title>LANGUAGES</Section.Title>
       <LangList style={{ display: "flex" }}>
         {languages &&
           languages.map(l => (
-            <Lang name={l.lang} level={l.level} isNative={l.native} />
+            <Lang
+              name={l.lang}
+              level={l.level}
+              isNative={l.native}
+              details={l.details}
+            />
           ))}
       </LangList>
     </LangsSection>

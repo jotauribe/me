@@ -98,8 +98,38 @@ export default {
     }
   ],
   languages: [
-    { lang: "ES", name: "Spanish", level: 5, native: true },
-    { lang: "EN", name: "English", level: 3, native: false }
+    {
+      lang: "ES",
+      name: "Spanish",
+      level: 5,
+      native: true,
+      details: {
+        color: "rgba(255, 209, 75, 0.9)",
+        bgColor: "rgba(255, 209, 75, 0.25)",
+        skills: [
+          { name: "Reading", level: 100 },
+          { name: "Writing", level: 100 },
+          { name: "Speaking", level: 100 },
+          { name: "Listening", level: 100 }
+        ]
+      }
+    },
+    {
+      lang: "EN",
+      name: "English",
+      level: 3,
+      native: false,
+      details: {
+        color: "rgba(255, 48, 91, 0.5)",
+        bgColor: "rgba(255, 48, 91, 0.25)",
+        skills: [
+          { name: "Reading", level: 95 },
+          { name: "Writing", level: 80 },
+          { name: "Speaking", level: 70 },
+          { name: "Listening", level: 70 }
+        ]
+      }
+    }
   ],
   education: [
     { institution: "Universidad de Cartagena", career: "Software Engineering" }

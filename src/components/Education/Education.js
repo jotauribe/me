@@ -16,20 +16,20 @@ const School = styled.div`
   font-weight: 700;
   line-height: 1em;
   font-family: "Open Sans Condensed";
-  color: gray;
+  color: var(--theme-color-accent-secondary);
 `;
 
-export default function Education({ style }) {
+export default function Education({ style = {}, className = "" }) {
   const { education } = data;
 
   return (
-    <Section style={style}>
+    <Section style={style} className={`education ${className}`}>
       <Section.Title>EDUCATION</Section.Title>
       {education &&
         education.map(e => (
-          <div>
+          <div style={{ padding: "4px" }}>
             <Career>{e.career.toUpperCase()}</Career>
-            <School>{e.institution}</School>
+            <School>@{e.institution}</School>
           </div>
         ))}
     </Section>

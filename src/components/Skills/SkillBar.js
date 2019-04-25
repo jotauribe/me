@@ -22,6 +22,7 @@ const SkillLevel = styled.div`
   opacity: 1;
   color: white;
   padding: 0 24px;
+  text-align: left;
 `;
 
 function SkillBar({ level, skill, color, bgColor }) {

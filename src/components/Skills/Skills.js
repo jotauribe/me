@@ -7,7 +7,7 @@ import SkillGroup from "./SkillGroup";
 
 const SkillsSection = styled(Section)`
   & > *:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
   }
 `;
 

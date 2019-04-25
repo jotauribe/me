@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Langs from "./components/Languages";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
 
 const ThreeColumnsLayout = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ class App extends Component {
             }}
           >
             <Skills style={{ marginBottom: "8px" }} />
-            <Langs style={{ flexGrow: "1" }} />
+            <Education style={{ flexGrow: "1" }} />
           </div>
           <div
             style={{
@@ -48,7 +49,7 @@ class App extends Component {
               justifyContent: "stretch"
             }}
           >
-            <Education style={{ marginBottom: "8px" }} />
+            <Contact style={{ marginBottom: "8px" }} />
             <Langs style={{ flexGrow: "1" }} />
           </div>
         </ThreeColumnsLayout>

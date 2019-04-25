@@ -17,7 +17,7 @@ const SectionTitle = styled.div.attrs({ className: "section__title" })`
   margin-bottom: 8px;
 `;
 
-function Section({ children, className, style }) {
+function Section({ children, className = "", style = {} }) {
   return (
     <SectionComponent className={`section ${className}`} style={style}>
       {children}

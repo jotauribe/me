@@ -45,7 +45,6 @@ export default function Header() {
     >
       <HeaderContent className="header__content">
         <Identity className="identity" />
-        <Contact />
         <About />
         <HeaderActions className="header__actions">
           <Networks />
